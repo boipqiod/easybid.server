@@ -3,6 +3,10 @@ import {APIRequest, APIResponse} from "../common/type";
 import FileManager from "../contoller/FileManager";
 const router = express.Router()
 
+router.get('/test', (req, res) => {
+    res.send({test: req})
+})
+
 router.post('/save', (req, res)=>{
     const data = req.body as APIRequest
     console.log(`************SaveData***********`)

@@ -14,10 +14,6 @@ app.use(cors());
 app.use('/data', router)
 app.use('/auth', authRouter)
 
-app.use('/', (req, res) => {
-    res.send("TEST!")
-})
-
 const server = http.createServer(app);
 server.listen(port, '0.0.0.0', function() {
     console.log('Listening to port:  ' + port);
