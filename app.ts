@@ -19,6 +19,6 @@ app.use('/', (req, res) => {
 })
 
 const server = http.createServer(app);
-server.listen(port, ()=>{
-    console.log(`Server is running at http://localhost:${port}`);
-})
+server.listen(port, '0.0.0.0', function() {
+    console.log('Listening to port:  ' + port);
+});
