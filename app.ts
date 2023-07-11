@@ -5,7 +5,7 @@ import router from "./src/routes/data";
 import authRouter from "./src/routes/auth";
 
 const app = express();
-const port = 3003;
+const port = 8080;
 
 app.use(express.json());
 app.use(cors());
