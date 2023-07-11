@@ -1,4 +1,5 @@
 import express from "express";
+import http from "http"
 import cors from 'cors'
 import router from "./src/routes/data";
 import authRouter from "./src/routes/auth";
@@ -16,6 +17,8 @@ app.use('/auth', authRouter)
 app.use('/', (req, res) => {
     res.send("TEST!")
 })
-app.listen(port, () => {
+
+const server = http.createServer(app);
+server.listen(port, ()=>{
     console.log(`Server is running at http://localhost:${port}`);
-});
+})
