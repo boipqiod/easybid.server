@@ -20,6 +20,7 @@ export interface BidItem {
 export interface Client {
     name: string
     amount: number
+    note?: string
 }
 export enum BidStatus{
     ready,
